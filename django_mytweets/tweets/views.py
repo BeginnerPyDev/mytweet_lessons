@@ -1,9 +1,7 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
-def index(request):
-    if request.method == 'GET':
+from django.views.generic import View
+class Index(ViewV iew):
+    def get(self, request):
         return HttpResponse('I am called from a get Request')
-    elif request.method == 'POST':
+    def post(self, request):
         return HttpResponse('I am called from a post Request')
